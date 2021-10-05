@@ -1,0 +1,15 @@
+.nav {
+  font-family: "Bungee";
+  color: #FFFFFF;
+  padding: 1.5em;
+  height: 120px;
+  background-color: #4056A1;
+}
+
+.logo {
+  font-family: "Bungee";
+}
+
+.create-new-tweet {
+  font-family: "Bungee";
+}

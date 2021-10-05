@@ -1,0 +1,13 @@
+header {
+  position: relative;
+  height: 400px;
+  width: 100%;
+  background-color: #f09000;
+  background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
+  color: white;
+  text-align: center;
+}
+
+header h2 {
+  text-align: center;
+}

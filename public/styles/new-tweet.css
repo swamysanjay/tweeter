@@ -1,12 +1,12 @@
 .new-tweet {
   padding: 0px 10px 20px 10px;
-  margin:2em;
+  margin: 2em;
   width:70%;
   background-color: #eee;
   display:inline-block;
 }
 
-h2 {
+.class-name {
   text-align: left;
   border-bottom: 3px solid black;
 }
@@ -14,16 +14,23 @@ h2 {
 textarea {
   padding: 5px;
   width: 100%;
-
+  background: transparent;
+  border: 0 none;
 }
 
-.counter {
+.new-tweet .counter {
   float:right;
+  font-family: "bungee";
 }
 
 button, input{
+  margin-top: 1em;
   float:left;
   background-color: #4056A1;
   font-family: "bungee";
   color: white;
 } 
+
+.over {
+  color: red;
+}

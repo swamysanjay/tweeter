@@ -1,24 +1,24 @@
-article.tweets {
+article.tweet {
   border-color: #545149;
   border: 4px solid;
   padding: 1rem 2rem;
   margin: 2em;
 }
 
-article.tweets > header {
+article.tweet > header {
   display: flex;
   align-items: center;
   flex-flow: row;
 }
 
-article.tweets > footer {
+article.tweet > footer {
   display: flex;
   align-items: center;
   flex-flow: row;
   padding: 0 10px;
 }
 
-article.tweets > p {
+article.tweet > p {
   border: 0;
   border-bottom: 4px solid;
   margin-bottom: 0;
@@ -26,16 +26,16 @@ article.tweets > p {
   border-color: #545149;
 }
 
-article.tweets h3.name {
+article.tweet h3.name {
   padding-left: 10px;
 }
 
-article.tweets h3.avatar {
+article.tweet p.handle {
   margin-left: auto;
   color: #CCCCCC;
 }
 
-article.tweets div.tools {
+article.tweet div.tools {
   margin-left: auto;
 }
 
@@ -43,7 +43,7 @@ article.tweets div.tools {
   color: orange;
 }
 
-article.tweets:hover {
+article.tweet:hover {
   box-shadow: 3px 3px 5px 6px #CCCCCC;
 }
 

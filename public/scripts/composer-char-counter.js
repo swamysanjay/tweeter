@@ -4,7 +4,7 @@ $(document).ready(function() {
 
   $(".new-tweet textarea").on("input", function() {
     let counter = $(this).val().length;
-    const element = $(".counter")
+    const element = $(".counter");
     result = maxChar - counter;
     //(counter).text(maxChar - $(this).val().length);
     if (counter > maxChar) {

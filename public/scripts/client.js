@@ -63,6 +63,8 @@ $(document).ready(() => {
         .done(() => {
           loadTweets();
           console.log('Success');
+          $('#tweet-text').val('');
+          // Empty textarea
         })
         .fail(() => {
           console.log("Failed");

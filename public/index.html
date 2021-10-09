@@ -39,11 +39,11 @@
       <span class ="logo">Tweeter</span> 
         <div id="write-tweet">
           <p><strong>Write</strong> a new tweet</p>
-          <i class="fas fa-angle-double-down moveUpDown"></i>
+          <i id="arrow-down" class="fas fa-angle-double-down moveUpDown"></i>
         </div>
     </nav>
     <!-- Header Element -->
-    <header>
+    <header class="background">
       <div>
           <img src="/images/profile-hex.png"> 
       </div>
@@ -53,20 +53,20 @@
       </div>
   </header>
 
-
-
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <div id="tweets-container">
         <section class="new-tweet">
+          <div id="error-container">
+          </div>
           <h2>Compose Tweet</h2>
-          <form action="/tweets" method="POST">
+          <form action="/tweets" method="POST" id="tweet-form">
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
           <input type="submit" value="Tweet">
           <span class="counter">140</span>
         </form>
         </section>
-      </div>
+        <section id="tweets-container">
+        </section>
     </main>
   </body>
 </html>

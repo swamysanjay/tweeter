@@ -11,3 +11,12 @@ body > header {
 header h2 {
   text-align: center;
 }
+
+@media screen and (min-width: 1024px){
+  .background {
+    float: left;
+    width: 35vw;
+    margin-top: 200px; 
+    margin-left: 50px;  
+  }
+}

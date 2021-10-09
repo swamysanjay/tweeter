@@ -17,6 +17,25 @@ textarea {
   background: transparent;
   border: 0 none;
 }
+#error-container {
+  grid-area: error;
+  display: none;
+  justify-content: space-between;
+  align-items: center;
+
+  color: rgb(202, 84, 84);
+  font-size: 1.2rem;
+
+  border: 4px solid;
+  border-color: rgb(202, 84, 84);
+
+  margin: 2vh 2vw;
+  padding: 0 3vw;
+}
+
+#error-container i {
+  font-size: 4rem;
+}
 
 .new-tweet .counter {
   float:right;

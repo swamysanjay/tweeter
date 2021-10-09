@@ -52,3 +52,19 @@ article.tweet:hover {
   height: 64px;
 }
 
+@media screen and (min-width: 1024px) {
+  .container{
+    margin: 0;
+    float: right;
+  }
+  .container, .new-tweet, .tweet, #tweet-text {
+    max-width: 60vw;
+
+    margin-top: 4em;
+  }
+  .profile-header {
+    max-width: 30vw;
+    margin-top: 2.95em;
+  }
+}
+

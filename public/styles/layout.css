@@ -50,6 +50,16 @@ body {
   #tweets-container {
     width: 55vw;
     height: 0vw;
-    margin-top: 250px;
+    /* margin-top: 250px; */
   }
+}
+
+.spinner {
+  display: none;
+  width: 100%;
+}
+
+.spinner-container {
+  max-width: 200px;
+  width: 90%;
 }

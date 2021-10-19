@@ -51,22 +51,21 @@
       <div>
           <h2>Sanjay Swamy</h2>
       </div>
-  </header>
+    </header>
 
     <!-- Page-specific (main) content here -->
     <main class="container">
         <section class="new-tweet">
-          <div id="error-container">
-          </div>
+          <div id="error-container"></div>
           <h2>Compose Tweet</h2>
           <form action="/tweets" method="POST" id="tweet-form">
-          <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
-          <input type="submit" value="Tweet">
-          <span class="counter">140</span>
-        </form>
+            <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
+            <input type="submit" value="Tweet">
+            <span class="counter">140</span>
+          </form>
         </section>
-        <section id="tweets-container">
-        </section>
+        <section id="tweets-container"></section>
+        <div class ="spinner-container"><img src="https://icon-library.com/images/loading-icon-transparent-background/loading-icon-transparent-background-12.jpg" alt="spinner" class="spinner"/></div>
     </main>
   </body>
 </html>

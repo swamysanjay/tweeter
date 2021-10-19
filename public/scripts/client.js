@@ -4,13 +4,16 @@
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
 
+//Create the tweet element
 const createTweetElement = (tweet) => {
   // eslint-disable-next-line
   const createdAtTimeAgo = timeago.format(tweet.created_at);
   return `<article class="tweet">
   <header>
-    <img class="person-img" src =${tweet.user.avatars} alt="Person">
-    <h3 class="name">${tweet.user.name}</h3>
+    <div class="avatar-name">
+      <img class="person-img" src =${tweet.user.avatars} alt="Person">
+      <h3 class="name">${tweet.user.name}</h3> 
+    </div>
     <p class="handle">${tweet.user.handle}</h3>
   </header>
   <p class="tweet-text">${tweet.content.text}</p>
@@ -25,6 +28,7 @@ const createTweetElement = (tweet) => {
 </article> `;
 };
 
+//Function to render the tweets
 const renderTweets = function(tweets) {
   for (let i of tweets) {
     const $tweet = createTweetElement(i);
@@ -43,8 +47,14 @@ $(document).ready(() => {
         console.log('Something is wrong', error);
       });
   };
-  loadTweets();
+  //Created a spinner that shows up as a buffer before loading tweets.
+  $('.spinner').show();
+  setTimeout(() => {
+    loadTweets();
+    $('.spinner').hide();
+  }, 1000);
 
+  //Created the functioning to show that the tweet has been submitted and added the event for what happens after.
   const submitTweet = function() {
     const form = $('#tweet-form');
     form.on('submit', function(event) {
@@ -52,18 +62,24 @@ $(document).ready(() => {
       const dataSerialized = $(this).serialize();
       const tweetLength = $('#tweet-text').val().length;
       if (tweetLength === 0 || tweetLength === null) {
-        return $('#error-container').html('<span class="fas fa-exclamation-triangle">Write something in the tweet smh</span>').slideDown('slow');
+        return $('#error-container').html('<span><i class="fas fa-exclamation-triangle"></i> Write something in the tweet smh</span>').slideDown('slow');
         // alert("Write something in the tweet smh");
       }
       if (tweetLength > 140) {
-        return $('#error-container').html('<span class="fas fa-exclamation-triangle">Fam you wrote too much take it easy big mans</span>').slideDown("slow");
+        return $('#error-container').html('<span><i class="fas fa-exclamation-triangle"></i> Fam you wrote too much take it easy big mans</span>').slideDown("slow");
         // return alert("Fam you wrote too much take it easy big mans");
       }
       $.post('/tweets', dataSerialized)
         .done(() => {
-          loadTweets();
-          console.log('Success');
+          $('#tweets-container').html('');
+          $('.spinner').show();
           $('#tweet-text').val('');
+          $('.counter').html(140);
+          setTimeout(() => {
+            loadTweets();
+            $('.spinner').hide();
+          }, 1000);
+          
           // Empty textarea
         })
         .fail(() => {
@@ -73,11 +89,6 @@ $(document).ready(() => {
     });
   };
   submitTweet();
-  
-  
-  
- 
-  
 });
 
 // const $tweet = createTweetElement(tweetData);
